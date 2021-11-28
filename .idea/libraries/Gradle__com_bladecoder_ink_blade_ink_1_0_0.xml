@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bladecoder.ink:blade-ink:1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bladecoder.ink/blade-ink/1.0.0/30a301480be57b68137c157d39636c6963e3b02c/blade-ink-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bladecoder.ink/blade-ink/1.0.0/d7908e5c12468320a511fac370876f9ee553dc77/blade-ink-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bladecoder.ink/blade-ink/1.0.0/d22b381df14ee441d62e3b82fcc1e0fa3e4a3916/blade-ink-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
