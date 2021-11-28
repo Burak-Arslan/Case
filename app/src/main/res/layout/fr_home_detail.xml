@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.ambluden.myapplication.ui.home_detail.FRHomeDetailVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:text="@{viewModel.satelliteName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="DENEME" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.satelliteDate}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtName"
+            tools:text="2021-11-27" />
+
+        <TextView
+            android:id="@+id/txtHeightValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/height_mass"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/txtHeight"
+            app:layout_constraintStart_toStartOf="@+id/txtName"
+            app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+
+        <TextView
+            android:id="@+id/txtHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="16dp"
+            android:text="@{viewModel.satelliteHeightMass}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txtName"
+            app:layout_constraintStart_toEndOf="@+id/txtHeightValue"
+            app:layout_constraintTop_toBottomOf="@+id/txtDate"
+            tools:text="110/1258748" />
+
+        <TextView
+            android:id="@+id/txtCost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/cost"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txtHeightValue"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeightValue" />
+
+        <TextView
+            android:id="@+id/txtCostValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.satelliteCost}"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/txtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtHeight"
+            tools:text="83000" />
+
+        <TextView
+            android:id="@+id/txtLastPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/last_position"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/txtHeightValue"
+            app:layout_constraintTop_toBottomOf="@+id/txtCost" />
+
+        <TextView
+            android:id="@+id/txtLastPositionValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{viewModel.satelliteLastPosition}"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtHeight"
+            app:layout_constraintTop_toBottomOf="@+id/txtCostValue"
+            tools:text="0.8951478, 0.6988247" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
